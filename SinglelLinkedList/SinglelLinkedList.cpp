@@ -12,7 +12,7 @@ public:
 
 class List
 {
-	Node* START;
+	Node* START; 
 public:
 	List();
 	void addNote();
