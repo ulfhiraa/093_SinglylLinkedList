@@ -21,3 +21,8 @@ public:
 	bool delNote(int element);
 	void tranverse();  
 };
+
+List::List()
+{
+	START = NULL;
+}
