@@ -58,6 +58,16 @@ void List::addNode() //Menambah sebuah Node kedalam List
 
 	while ((current != NULL) && (nim >= current->noMhs))
 	{
-		if 
+		if (nim == current->noMhs)
+		{
+			cout << "\nDuplikasi noMhs tidak diizinkan\n";
+			return;
+		}
+		previous = current;
+		current = current->next;
 	}
+
+	//Jika loop diatas dieksekusi, previous dan current akan menempati posisi disana
+	nodeBaru->next = current;
+	previous->next = nodeBaru;
 }
