@@ -51,4 +51,13 @@ void List::addNode() //Menambah sebuah Node kedalam List
 		START = nodeBaru;
 		return; 
 	}
+	Node* previous, * current;
+
+	current = START;
+	previous = START;
+
+	while ((current != NULL) && (nim >= current->noMhs))
+	{
+		if 
+	}
 }
