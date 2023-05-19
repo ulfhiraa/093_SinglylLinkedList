@@ -19,5 +19,5 @@ public:
 	bool Search(int nim, Node** current, Node** previous);
 	bool listEmpty();
 	bool delNote(int element);
-	void tranverse(); 
+	void tranverse();  
 };
