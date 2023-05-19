@@ -15,7 +15,7 @@ class List
 	Node* START; 
 public: 
 	List();
-	void addNote();
+	void addNode();
 	bool Search(int nim, Node** current, Node** previous);
 	bool listEmpty();
 	bool delNote(int element);
@@ -25,4 +25,30 @@ public:
 List::List()
 {
 	START = NULL;
+}
+
+void List::addNode() //Menambah sebuah Node kedalam List
+{
+	int nim;
+	char nm[20];
+	cout << "\nMasukkan Nomor Mahasiswa : ";
+	cin >> nim;
+	cout << "\nMasukkan Nama : ";
+	cin >> nm;
+
+	Node* nodeBaru = new Node;
+	nodeBaru->noMhs = nim;
+	strcpy_s(nodeBaru->nama, nm);
+
+	if (START == NULL || nim <= START->noMhs)
+	{
+		if ((START != NULL) && (nim == START->noMhs))
+		{
+			cout << "\nDuplikasi noMhs tidak diizinkan\n";
+			return;
+		}
+		nodeBaru->next = START;
+		START = nodeBaru;
+		return;
+	}
 }
