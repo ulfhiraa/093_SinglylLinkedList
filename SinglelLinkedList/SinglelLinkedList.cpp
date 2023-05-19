@@ -4,7 +4,7 @@ using namespace std;
 
 class Node
 {
-public:
+public: 
 	int noMhs;
 	char nama[20];
 	Node* next;
