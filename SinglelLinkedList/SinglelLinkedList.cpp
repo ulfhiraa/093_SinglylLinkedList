@@ -13,11 +13,11 @@ public:
 class List
 {
 	Node* START; 
-public:
+public: 
 	List();
 	void addNote();
 	bool Search(int nim, Node** current, Node** previous);
 	bool listEmpty();
 	bool delNote(int element);
-	void tranverse();
+	void tranverse(); 
 };
