@@ -67,7 +67,7 @@ void List::addNode() //Menambah sebuah Node kedalam List
 		current = current->next;
 	}
 
-	//Jika loop diatas dieksekusi, previous dan current akan menempati posisi disana
+	//Jika loop diatas dieksekusi, previous dan current akan menempati posisi dimana
 	nodeBaru->next = current;
 	previous->next = nodeBaru; 
 }
@@ -78,4 +78,17 @@ bool List::listEmpty()
 		return true;
 	else
 		return false;
+}
+
+bool List::delNote(int nim) // menghapus node dari dalam list
+{
+	Node* current,* previous;
+	if (Search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = START->next;
+
+	delete current;
+	return true;
 }
