@@ -122,7 +122,7 @@ void List::tranverse() //Mengunjungi dan membaca data dalam list
 	}
 }
 
-int main()
+int main() 
 {
 	List mhs;
 	int nim;
