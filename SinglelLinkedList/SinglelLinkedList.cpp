@@ -93,7 +93,7 @@ bool List::delNote(int nim) // menghapus node dari dalam list
 	return true;
 }
 
-//Check aapakah node yang dimaksud ada didalam list atau tidak?
+//Check apakah node yang dimaksud ada didalam list atau tidak?
 bool List::Search(int nim, Node** previous, Node** current)
 {
 	*previous = START;
@@ -104,4 +104,20 @@ bool List::Search(int nim, Node** previous, Node** current)
 		*current = START;
 	}
 	return (*current != NULL);
+}
+
+void List::tranverse() //Mengunjungi dan membaca data dalam list
+{
+	if ((listEmpty))
+		cout << "\nList kosong\n";
+	else
+	{
+		cout << endl << "Data didalam list adalah : " << endl;
+		Node* currentNode;
+		for (currentNode = START; currentNode != NULL; currentNode = currentNode->next);
+		{
+			cout << currentNode->noMhs << " " << currentNode->nama << "\n";
+		}
+		cout << endl;
+	}
 }
