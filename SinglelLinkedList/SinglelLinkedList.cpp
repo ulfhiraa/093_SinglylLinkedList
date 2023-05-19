@@ -49,6 +49,6 @@ void List::addNode() //Menambah sebuah Node kedalam List
 		}
 		nodeBaru->next = START;
 		START = nodeBaru;
-		return;
+		return; 
 	}
 }
